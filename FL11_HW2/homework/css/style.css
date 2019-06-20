@@ -6,8 +6,8 @@
 	.tm-team-img,
 	.blocks > .tm-content-box,
 	.carousel-indicators {
-        display: none;
-    }
+        	display: none;
+    	}
 	section.heading{
 		display: block;
 	}
@@ -71,7 +71,6 @@
 	}
 	.box-bg:hover{
 		background: lightskyblue;
-
 	}
 	.box-bg h2:hover{
 		color: #fff;	
