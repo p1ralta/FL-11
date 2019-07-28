@@ -1,0 +1,66 @@
+#root {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+input {
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 5px;
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.message {
+  font-size: 30px;
+}
+
+.btn-wrap {
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  width: 35px;
+  height: 35px;
+  background: url('img/remove-s.jpg');
+}
+
+.checkbox {
+  width: 35px;
+  height: 35px;
+  background: url('img/todo-s.png');  
+}
+
+.done {
+  width: 35px;
+  height: 35px;
+  background: url('img/done-s.png');
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
