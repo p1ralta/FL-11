@@ -24,8 +24,7 @@ function getUsers() {
       for(let i = 0; i < parentList.length; i++) {
         let parent = parentList[i];
         let sibling = parentList[i].firstElementChild;
-        addCat(parent, sibling)
-        
+        addCat(parent, sibling); 
       }  
       hideLoading();
     }
@@ -68,7 +67,6 @@ function editUser(e) {
         xhr.onload = function() {
             if (xhr.status === 200) {
                 const userInfo = JSON.parse(xhr.responseText);
-                
                 if(userInfo.name === '') {
                   alert('Write Name');
                 } else{
@@ -92,7 +90,6 @@ function editUser(e) {
 
 // Delete User
 document.addEventListener('click', deleteUser);
-
 function deleteUser(e) {
   let currentId = e.target.parentElement.parentElement.parentElement.id;
   const deleteButtons = document.querySelectorAll('.delete');
@@ -110,7 +107,6 @@ function deleteUser(e) {
           console.error(users);
         }
         hideLoading();
-       // e.target.parentElement.parentElement.parentElement.style.display = 'none';
       }
       xhr.onerror = function() {
         console.log('Something went wrong');
@@ -137,7 +133,6 @@ function redirect(e) {
       showLoading();
       xhr.onload = function() {
         if(xhr.status == 200) {
-
           const post = JSON.parse(xhr.responseText);
           let outputPost = `
                         <div class="container" style="text-alight: center;position: relative">
@@ -148,14 +143,12 @@ function redirect(e) {
                           </ul>
                           <button class="back-button btn btn-success">Back</button>
                         </div>
-                        `;
-                        
+                        `;        
           document.body.innerHTML = outputPost;
           document.querySelector('.back-button').addEventListener('click', () => {
             window.location.reload();
           });
         }
-
         const xhr2 = new XMLHttpRequest();
         xhr2.open('GET','https://jsonplaceholder.typicode.com/comments?postId=' + id, true);
         xhr2.onload = function() {
