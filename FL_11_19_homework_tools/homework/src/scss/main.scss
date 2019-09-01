@@ -1,5 +1,82 @@
 @import "variables";
 
+body {
+  font-family: $base-family;
+  color: $text-color;
+  background-color: #bfe8e8;
+}
+
 h1 {
-  color: $base-color;
+  color: $header-color;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 40px 0 10px 0;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: $base-color;
+  border-radius: 20px;
+  padding: 40px 40px 0 40px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rules {
+  ul {
+    list-style: none;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    li {
+      line-height: 1.6;
+      font-family: Arial;
+    }
+  }
+}
+
+.output {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+  img {
+    width: 100px;
+    height: 100px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.reset {
+  width: 200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  button {
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $base-color;
+    background-color: $header-color;
+    border: 0;
+    &:hover {
+      background-color: $text-color;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }

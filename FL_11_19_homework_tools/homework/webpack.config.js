@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PrettierPlugin = require("prettier-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -8,8 +9,7 @@ module.exports = {
   },
   output: {
     filename: 'js/[name].js',
-    path: path.resolve(__dirname, './dist')//,
-    //publicPath: '/dist/js'
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [
@@ -45,18 +45,49 @@ module.exports = {
               outputPath: 'img/',
               publicPath: 'img/'
             }
-          }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75
+              }
+            }
+          },
         ]
       }
     ]
   },
+  watch: true,
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/style.css'
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      minify: true
-    })
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
+    }),
+    new PrettierPlugin()
   ]
 }
