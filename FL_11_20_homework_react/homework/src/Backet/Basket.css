@@ -1,0 +1,11 @@
+.Basket {
+  background: linear-gradient(to top, #f6f6f6, #fff);
+  height: 180px;
+  padding: 10px;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.Basket p{
+  font-style: italic;
+}
