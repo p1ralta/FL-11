@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.6;
+  background-color: #232323;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #e6e6e6;
+}
+
+.text {
+  width: 50%;
+}
+
+.text h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #be1e28;
+}
+
+.time p{
+  color: #2775ca;
+  font-size: 16px;
+  margin: 0;
+}
+
