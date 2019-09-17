@@ -1,0 +1,14 @@
+<div>
+ <app-header></app-header>
+ <div class="list">
+  <div class="item"  *ngFor='let item of keysBlogs'>
+    <div class="text">
+      <h3>{{ item.payload.val().title }}</h3>
+      <p>{{ item.payload.val().description }}</p>
+    </div>
+    <div class="time">
+      <p>{{ item.payload.val().time }}</p>
+    </div>
+  </div>
+ </div>
+</div>
